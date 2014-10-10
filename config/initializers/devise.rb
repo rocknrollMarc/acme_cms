@@ -1,13 +1,13 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
-  config.secret_key = "d9eb5171c59a4c817f68b0de27b8c1e340c2341b52cdbc60d3083d4e8958532" \
-                      "18dcc5f589cafde048faec956b61f864b9b5513ff9ce29bf9e5d58b0f234f8e3b"
+  # config.secret_key = "d9eb5171c59a4c817f68b0de27b8c1e340c2341b52cdbc60d3083d4e8958532" \
+   #                   "18dcc5f589cafde048faec956b61f864b9b5513ff9ce29bf9e5d58b0f234f8e3b"
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me@config-initializers-devise.com"
+  config.mailer_sender = "marc.bluemner@gmail.com"
 
 
   # config.parent_controller = "ApplicationWithFakeEngine"
@@ -28,7 +28,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply hash where the value is a boolean expliciting if authentication
   # should be aborted or not if the value is not present. By default is empty.
-  # config.authentication_keys = [ :email ]
+   config.authentication_keys = [ :email ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to
@@ -54,7 +54,7 @@ Devise.setup do |config|
   config.http_authenticatable = true
 
   # If http headers should be returned for AJAX requests. True by default.
-  # config.http_authenticatable_on_xhr = true
+   config.http_authenticatable_on_xhr = true
 
   # The realm used in Http Basic Authentication. "Application" by default.
   # config.http_authentication_realm = "Application"
@@ -105,10 +105,11 @@ Devise.setup do |config|
   # config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
-  # config.unlock_keys = [ :email ]
+   # config.unlock_keys = [ :email ]
+
 
   # Defines which strategy will be used to unlock an account.
-  # :email = Sends an unlock link to the user email
+   #:email = Sends an unlock link to the user email
   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
   # :both  = Enables both strategies
   # :none  = No unlock strategy. You should handle unlocking by yourself.
@@ -116,15 +117,15 @@ Devise.setup do |config|
 
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
-  # config.maximum_attempts = 20
+   config.maximum_attempts = 20
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
-  # config.unlock_in = 1.hour
+   config.unlock_in = 1.hour
 
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [ :email ]
+   config.reset_password_keys = [ :email ]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
@@ -136,7 +137,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
-  # config.token_authentication_key = :auth_token
+   config.token_authentication_key = :auth_token
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
